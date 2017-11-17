@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+ }
+
+ .container {
+    width: 1050px;
+    margin: 0 auto;
+ }
+
+ .visuallyhidden { 
+    border: 0; 
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute; 
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
