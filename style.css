@@ -311,3 +311,480 @@ body {
     opacity:1;
 }
 
+/* section pictures*/
+
+.section-pictures{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: #fff;
+
+}
+
+.section-pictures .col-1-3{
+    width: 33%;
+    float: left;
+    padding: 0 10px;
+    position: relative;
+}
+
+.section-pictures .picture-img{
+    width: 329px;
+    height: 225px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.picture-img img{
+    transition: 0.5s all;
+    position: relative;
+}
+
+.picture-img:hover img{
+    transform: scale(1.1,1.1);
+}
+
+.section-pictures .picture-cnt{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    top: 120px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+    height: 70px;
+    width: 100%;
+    transition: 0.5s all;
+}
+
+
+
+.section-pictures .picture-title{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.section-pictures .picture-title::after{
+    content: '';
+    width: 150px;
+    height: 6px;
+    background: #38C3AD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   
+}
+
+.picture-img .picture-text{
+    overflow: hidden;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    transition: 0.5s height, 0.5s color;
+}
+
+.picture-img.active .picture-text{
+    height: 190px;
+    color: rgba(0, 0, 0, 1);
+    overflow: visible;
+    transition: 0.5s height, 0.5s color;
+    
+}
+
+.picture-img.active .picture-cnt{
+    top: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #DDD;
+    
+}
+
+.picture-img.active .picture-text {
+    height: 190px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.picture-img.active img {
+    transform: scale(1.3, 1.3);
+}
+
+.picture-img:not(.active):hover .picture-cnt {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.picture-cnt {
+    top: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #DDD;
+}
+
+
+
+
+
+/* section prices */
+
+.section-prices{
+    width: 100%;
+    height: 777px;
+    margin-top: 45px;
+    padding-bottom: 45px;
+    background: rgb(241, 241, 241);
+}
+.section-prices .section-main-title{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-left: 10px;
+}
+
+.section-prices .container{
+    position: relative;
+}
+
+.section-prices .section-main-title span::after{
+    content: '';
+    width: 320px;
+    height: 8px;
+    background: #38C3AD;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+}
+
+.section-prices .col-1-3{
+    width: 33%;
+    float: left;
+    padding: 0 10px;
+   
+}
+.section-prices .box-price{
+    background: #F9F9F9;
+    border: 2px solid #D4D4D4;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+} 
+
+.section-prices .price-value{
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #D4D4D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 35px auto;
+    color: #C2C2C2;
+    position: relative;
+   
+    
+}
+.section-prices .title-box-price{
+    font-size: 26px;
+    color: #27C7AB;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin: 20px auto;
+ 
+
+}
+.section-prices .price{
+    color: #C2C2C2;
+    font-size: 45px;
+    font-weight:  600;
+    padding-bottom: 10px;
+}
+.section-prices .price-small{
+    color: #C2C2C2;
+    font-size: 16px;
+    position: absolute;
+    top: 17%;
+    right: 20%;
+    vertical-align: super;
+}
+
+
+.section-prices .price-description{
+    width: 100%;
+}
+.section-prices .price-description li{
+    
+    background: #E4E4E4;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    color: #8F8F8F;
+}
+
+.section-prices .price-description li:last-child{
+    background: #F1F1F1;
+   
+
+}
+.section-prices .box-btn-price{
+    margin-bottom: 10px;
+    margin-top: 100px;
+    font-size: 16px;
+    display: inline-block;
+}
+.section-prices .box-btn-price a{
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background: #38C3AD;
+    border: 1px solid #38C3AD;
+    padding: 4px 25px;
+
+}
+
+/* box-price active */
+
+
+ .box-price.active{
+    background: #38C3AD;
+    border: 2px solid #38C3AD;
+    color: #fff;
+}
+
+.box-price.active .box-btn-price a{
+    color:#38C3AD;
+    background: #fff;
+
+}
+
+.box-price.active .title-box-price{
+    color: #fff;
+}
+
+/* section form */
+
+.section-contact{
+    height: 514px;
+    color: #fff;
+    position: relative;
+    padding-top: 40px;
+    
+}
+
+
+.contact-form{
+    margin-top: 80px;   
+}
+
+.contact-form label{
+    display: none;
+}
+
+
+
+.section-contact .title-contact span{
+    font-size: 26px;
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 22px;
+    left: 395px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.section-contact .title-contact span::after{
+    content: '';
+    width: 320px;
+    height: 8px;
+    background: #38C3AD;
+    position: absolute;
+    top: 26px;
+    left: 0;
+}
+
+
+.contact-form .col-1-2.left{
+    width: 630px;
+    float: left;
+    position: relative;
+}
+
+.col-1-2-left label,input{
+    display: inline-block;
+}
+
+.contact-form .col-1-2.right{
+    width: 340px;
+    float: right;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #A1E6D1;
+    height: 65px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 28px;
+    font-weight: 300;
+    font-size: 24px;
+    
+  
+}
+
+.contact-form textarea {
+    height: 195px;
+    resize: none;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #38C3AD;
+    box-shadow: inset 0 0 0 1px #38C3AD;
+    outline: none;
+}
+
+.contact-form ::-webkit-input-placeholder {
+    color: #C9C9C9;
+}
+
+.contact-form ::-moz-placeholder {
+    color: #C9C9C9;
+}
+
+.contact-form :-ms-input-placeholder {
+    color: #C9C9C9;
+}
+
+.contact-form :-moz-placeholder {
+    color: #C9C9C9;
+}
+
+.section-contact .contact-img{
+    display: block;
+    background-image: url('warsztat/images/red_chair.png');
+    height: 210px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.contact-form .checkbox{
+    position: relative;
+    margin-top: 30px;
+    display: block;
+    overflow: hidden;
+}
+
+.contact-form .checkbox input{
+    position: absolute;
+    left: -10000px;
+}
+
+.contact-form .checkbox input ~ .checkbox-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #A1E6D1;
+    display: inline-block;
+}
+
+.contact-form .checkbox-icon:before{
+    width: 50px;
+    height: 50px;
+    background: url('warsztat/images/form_ok.jpg') center center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    opacity: 0;
+    visibility: visible;
+    transform: scale(0.6, 0.6);
+    transition: 0.5s all;
+}
+
+
+.contact-form .checkbox input:checked ~ .checkbox-icon:before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1, 1);
+}
+
+.contact-form .checkbox .checkbox-text {
+    display: inline-block;
+    width: calc(100% - 70px);
+    vertical-align: top;
+    padding: 5px 0 0 5px;
+    color: #AAA;
+}
+
+.contact-form .button-contact{
+    font-size: 26px;
+    display: inline-block;
+    padding: 15px 30px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background: #38C3AD;
+    border: 1px solid #38C3AD;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* footer */
+
+
+.footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #fff;
+}
+.footer .col-1-2{
+    width: 50%;
+    float: left;
+}
+
+.footer .copy{
+    float: left;
+    font-size: 16px;
+    color: lightgray;
+}
+
+.footer .social-icons{
+    margin-left: 150px;
+}
+.footer .social-icons a{
+    float: left;
+    padding: 0 3px;
+
+}
+
+
+
+.footer .logo small{
+    float: right;
+    font-size: 20px;
+    color: #9B9B9B;
+    text-transform: uppercase;
+    margin-left: 60px;
+    font-weight: 700;
+    line-height: 40px;
+    vertical-align: top;
+    
+}
+
+.footer .logo span{
+  font-weight: normal;
+
+}
