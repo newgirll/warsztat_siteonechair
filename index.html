@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SitOnChair</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
@@ -72,7 +72,7 @@
                     <a href="#" class="picture-img">
                         <img src="warsztat/images/box1_img.jpg" alt="white chair">
                         <div class="picture-cnt">
-                            <h3 class="picture-title">jakis tytul</h3>
+                            <h3 class="picture-title">Chair Clair</h3>
                             <p class="picture-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, laudantium adipisci 
                             </p>
@@ -83,7 +83,7 @@
                     <a href="#" class="picture-img">
                         <img src="warsztat/images/box2_img.jpg" alt="white chair">
                         <div class="picture-cnt">
-                            <h3 class="picture-title">jakis tytul</h3>
+                            <h3 class="picture-title">Chair MARGARITA</h3>
                             <p class="picture-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, laudantium adipisci 
                             </p>
@@ -94,7 +94,7 @@
                     <a href="#" class="picture-img active">
                         <img src="warsztat/images/box1_img.jpg" alt="white chair">
                         <div class="picture-cnt">
-                            <h3 class="picture-title">jakis tytul</h3>
+                            <h3 class="picture-title">Finds all input</h3>
                             <p class="picture-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, laudantium adipisci 
                             </p>
@@ -112,6 +112,8 @@
             <div class="row clearfix">
                 <div class="col-1-3">
                     <div class="box-price">
+                        <div class='circle1'>&nbs;</div>
+                        <div class='circle2'>&nbs;</div>
                         <h3 class="title-box-price">Basic Plan</h3>
                             <div class="price-value">
                                 <span class="price">85
@@ -119,7 +121,7 @@
                                 </span>
                                 <p class="price-text">PLN / MSC</p>
                             </div>
-                        <ul class="price-description">
+                        <ul class="price-description bas">
                             <li>Zakup towaru + dowóz</li>
                             <li>Serwis</li>
                         </ul>
@@ -130,16 +132,19 @@
                 </div>
                 <div class="col-1-3">
                     <div class="box-price active">
-                        <h3 class="title-box-price">Basic Plan</h3>
-                            <div class="price-value">
-                                <span class="price">85
+                        <div class="circle1 active">&nbs;</div>
+                        <div class='circle2 active'>&nbs;</div>
+                        <h3 class="title-box-price">Standard Plan</h3>
+                            <div class="price-value active">
+                                <span class="price">95
                                 <sup class="price-small">99</sup>
                                 </span>
                                 <p class="price-text">PLN / MSC</p>       
                             </div>
-                        <ul class="price-description">
+                        <ul class="price-description active">
                             <li>Zakup towaru + dowóz</li>
                             <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
                         </ul>
                         <div class="box-btn-price">
                             <a href="#" class="btn-price">Dołącz</a>
@@ -148,16 +153,20 @@
                 </div>
                 <div class="col-1-3">
                     <div class="box-price">
-                        <h3 class="title-box-price">Basic Plan</h3>
+                        <div class="circle1">&nbs;</div>
+                        <div class="circle2">&nbs;</div>
+                        <h3 class="title-box-price">Advance Plan</h3>
                             <div class="price-value">
-                                <span class="price">85
-                                <sup class="price-small">99</sup>
+                                <span class="price">211
+                                <sup class="price-small">00</sup>
                                 </span>
                                 <p class="price-text">PLN / MSC</p>   
                             </div>
-                        <ul class="price-description">
+                        <ul class="price-description adv">
                             <li>Zakup towaru + dowóz</li>
                             <li>Serwis</li>
+                            <li>Gwarancja 6 lat</li>
+                            <li>Porady projektanta</li>
                         </ul>
                         <div class="box-btn-price">
                             <a href="#" class="btn-price">Dołącz</a>
@@ -172,14 +181,13 @@
             <h2 class="title-contact">
                 <span>Kontakt</span>
             </h2>
-        
             <form class="contact-form" method="POST">
             <div class="row clearfix">
                 <div class="col-1-2 left">
                     <label for="name">Imię</label>
                     <input type="text" id="name" name="name" placeholder="Imię">
-                    <label for="lastName">Nazwisko</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Nazwisko">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="email">
                     <label for="message">Wiadomość</label>
                     <textarea id="message" name="message" placeholder="Wiadomość"></textarea>
                 </div>
@@ -199,7 +207,7 @@
             </div>      
             </form>
         </div>
-    </section><!--esection-contact-->
+    </section><!--e:section-contact-->
     <footer class="footer">
         <div class="container">
             <div class="row clearfix">
@@ -227,10 +235,6 @@
                 </div> 
             </div>
         </div>
-    </footer>
-
-    
-    
-    
+    </footer>   
 </body>
 </html>

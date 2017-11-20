@@ -11,32 +11,62 @@
  }
 
  .container {
-    width: 1050px;
+    max-width: 1050px;
+    width: 100%;
     margin: 0 auto;
  }
 
- .visuallyhidden { 
-    border: 0; 
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute; 
-    width: 1px;
-    white-space: nowrap; /* 1 */
-}
 
 body {
     font-family: Raleway, sans-serif;
 }
 
+.circle1{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #D4D4D4;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+    color: transparent;
+
+}
+
+.circle2{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    background: #D4D4D4;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    overflow: hidden;
+    color: transparent;
+
+}
+
+.circle1.active {
+    background: #38C3AD;
+    border: #38C3AD;
+}
+
+.circle2.active {
+    background: #fff;
+}
+
+
 /* header */
 
 .main-header{
-    height: 40px;
+    height: 30px;
     background: black;
     position: relative;
     z-index: 1000;
@@ -164,11 +194,12 @@ body {
     color: #24BAA0;
 }
 
-/* section */
+/* section-slider */
 
 .section-slider {
-    height:505px;
+    height:500px;
     background-image:linear-gradient(180deg, #fff 50%, #D0CFD7 100%);
+    margin-top: 40px;
 }
 
 .section-slider .container{
@@ -177,7 +208,7 @@ body {
 }
 
 .section-slider .slider{
-    height: 505px;
+    height: 425px;
     width: 100%;
     position: relative;
 
@@ -246,10 +277,10 @@ body {
 
 }
 
-/* .section-slider .slide-picture img{
+.section-slider .slide-picture img{
     width: 378px;
     height: 378px;
-} */
+}
 
 .section-slider .slide-cnt{
     width: 50%;
@@ -307,9 +338,6 @@ body {
     opacity: 0.8;
 }
 
-.slider-box:active {
-    opacity:1;
-}
 
 /* section pictures*/
 
@@ -360,7 +388,6 @@ body {
 }
 
 
-
 .section-pictures .picture-title{
     position: relative;
     padding-bottom: 10px;
@@ -381,70 +408,44 @@ body {
 .picture-img .picture-text{
     overflow: hidden;
     height: 0;
-    color: rgba(0, 0, 0, 0);
-    transition: 0.5s height, 0.5s color;
+    color: rgba(0, 0, 0, 0);  
 }
 
 .picture-img.active .picture-text{
     height: 190px;
     color: rgba(0, 0, 0, 1);
-    overflow: visible;
-    transition: 0.5s height, 0.5s color;
-    
+    overflow: visible; 
 }
 
 .picture-img.active .picture-cnt{
     top: 0;
     height: 100%;
-    background: rgba(255, 255, 255, 1);
+    background: #fff;
     border: 1px solid #DDD;
     
 }
-
-.picture-img.active .picture-text {
-    height: 190px;
-    color: rgba(0, 0, 0, 1);
-}
-
-.picture-img.active img {
-    transform: scale(1.3, 1.3);
-}
-
-.picture-img:not(.active):hover .picture-cnt {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.picture-cnt {
-    top: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 1);
-    border: 1px solid #DDD;
-}
-
-
-
-
 
 /* section prices */
 
 .section-prices{
     width: 100%;
     height: 777px;
-    margin-top: 45px;
-    padding-bottom: 45px;
+    margin-top: 60px;
     background: rgb(241, 241, 241);
 }
-.section-prices .section-main-title{
-    font-size: 25px;
-    text-transform: uppercase;
-    margin-bottom: 60px;
-    padding-top: 60px;
-    padding-left: 10px;
-}
 
-.section-prices .container{
+.section-prices .section-main-title{
     position: relative;
 }
+
+.section-prices .section-main-title{
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    position: relative;
+}
+
 
 .section-prices .section-main-title span::after{
     content: '';
@@ -452,12 +453,15 @@ body {
     height: 8px;
     background: #38C3AD;
     position: absolute;
-    top: 85px;
-    left: 10px;
+    top: 26px;
+    left: 0;
+    margin: 50px auto;
+    
 }
 
+
 .section-prices .col-1-3{
-    width: 33%;
+    width: 33.3333%;
     float: left;
     padding: 0 10px;
    
@@ -468,45 +472,47 @@ body {
     height: 520px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     position: relative;
+    margin-top: 50px;
 } 
 
-.section-prices .price-value{
+.box-price .price-value{
     width: 135px;
     height: 135px;
     border-radius: 50%;
     background: #fff;
-    border: 2px solid #D4D4D4;
+    border: 2px solid;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 35px auto;
+    margin: 70px auto;
     color: #C2C2C2;
-    position: relative;
-   
-    
+    position: relative;  
 }
-.section-prices .title-box-price{
+
+.box-price.active .price-value.active{
+    border: none;
+}
+.box-price .title-box-price{
     font-size: 26px;
     color: #27C7AB;
     text-transform: uppercase;
     position: absolute;
-    top: 0;
+    margin-top: 30px;
     text-align: center;
-    margin: 20px auto;
  
 
 }
-.section-prices .price{
+.box-price .price{
     color: #C2C2C2;
     font-size: 45px;
     font-weight:  600;
     padding-bottom: 10px;
+
 }
-.section-prices .price-small{
+.box-price .price-small{
     color: #C2C2C2;
     font-size: 16px;
     position: absolute;
@@ -516,39 +522,69 @@ body {
 }
 
 
-.section-prices .price-description{
+.box-price .price-description{
     width: 100%;
 }
-.section-prices .price-description li{
+
+.box-price .price-description li{
     
-    background: #E4E4E4;
+    background: #E3E3E3;
     font-size: 24px;
     text-align: center;
-    padding: 10px 0;
     color: #8F8F8F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px 0;
+    
 }
 
-.section-prices .price-description li:last-child{
+.box-price .price-description.adv li:nth-child(2n+1){
+    background: #E3E3E3;
+
+}
+
+.box-price .price-description.adv li:last-child,
+.box-price .price-description.bas li:last-child{
+    background:  #F1F1F1;
+}
+
+.box-price .price-description.adv li:nth-child(2),
+.box-price .price-description.active li:nth-child(2){
     background: #F1F1F1;
-   
 
 }
-.section-prices .box-btn-price{
-    margin-bottom: 10px;
-    margin-top: 100px;
+.box-price .price-description.active li,
+.box-price .price-description.active li:last-child{
+    background: #fff;
+
+}
+
+.box-price .box-btn-price{
+    
     font-size: 16px;
     display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.section-prices .box-btn-price a{
+
+.box-price .box-btn-price a{
     color: #fff;
     border-radius: 10px;
     text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     background: #38C3AD;
     border: 1px solid #38C3AD;
-    padding: 4px 25px;
-
+    padding: 8px 30px;
 }
 
 /* box-price active */
@@ -573,33 +609,32 @@ body {
 /* section form */
 
 .section-contact{
-    height: 514px;
+    height: 630px;
     color: #fff;
     position: relative;
-    padding-top: 40px;
-    
-}
-
-
-.contact-form{
-    margin-top: 80px;   
+    padding-top: 60px;
+    margin-top: 60px;
+     
 }
 
 .contact-form label{
     display: none;
 }
 
-
+.title-contact{
+    position: relative;
+    
+}
 
 .section-contact .title-contact span{
     font-size: 26px;
     color: black;
     text-transform: uppercase;
     position: absolute;
-    top: 22px;
-    left: 395px;
+    bottom: 0;
+    left: 0;
     text-align: center;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .section-contact .title-contact span::after{
@@ -610,11 +645,12 @@ body {
     position: absolute;
     top: 26px;
     left: 0;
+
 }
 
 
 .contact-form .col-1-2.left{
-    width: 630px;
+    width: 600px;
     float: left;
     position: relative;
 }
@@ -624,22 +660,20 @@ body {
 }
 
 .contact-form .col-1-2.right{
-    width: 340px;
+    width: 350px;
     float: right;
 }
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     font-family: 'Raleway', sans-serif;
-    border: 1px solid #A1E6D1;
-    height: 65px;
+    border: 1px solid #C4F6F2   ;
+    height: 70px;
     padding: 15px;
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     font-weight: 300;
-    font-size: 24px;
-    
-  
+    font-size: 26px; 
 }
 
 .contact-form textarea {
@@ -656,25 +690,25 @@ body {
 }
 
 .contact-form ::-webkit-input-placeholder {
-    color: #C9C9C9;
+    color: #D7D7D7;
 }
 
 .contact-form ::-moz-placeholder {
-    color: #C9C9C9;
+    color: #D7D7D7;
 }
 
 .contact-form :-ms-input-placeholder {
-    color: #C9C9C9;
+    color: #D7D7D7;
 }
 
 .contact-form :-moz-placeholder {
-    color: #C9C9C9;
+    color: #D7D7D7;
 }
 
 .section-contact .contact-img{
     display: block;
     background-image: url('warsztat/images/red_chair.png');
-    height: 210px;
+    height: 240px;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -694,28 +728,29 @@ body {
 }
 
 .contact-form .checkbox input ~ .checkbox-icon {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #A1E6D1;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #C4F6F2;
     display: inline-block;
 }
 
 .contact-form .checkbox-icon:before{
     width: 50px;
     height: 50px;
-    background: url('warsztat/images/form_ok.jpg') center center no-repeat;
+    background: url('warsztat/images/form_ok.jpg');
+    background-position:  center center;
+    background-repeat:  no-repeat;
     position: absolute;
     left: 0;
     top: 0;
     content: '';
     opacity: 0;
     visibility: visible;
-    transform: scale(0.6, 0.6);
+    transform: scale(0.5, 0.5);
     transition: 0.5s all;
 }
 
-
-.contact-form .checkbox input:checked ~ .checkbox-icon:before {
+.contact-form .checkbox input:checked ~.checkbox-icon:before {
     opacity: 1;
     visibility: visible;
     transform: scale(1, 1);
@@ -723,24 +758,35 @@ body {
 
 .contact-form .checkbox .checkbox-text {
     display: inline-block;
-    width: calc(100% - 70px);
+    width: 80%;
+    font-size: 18px;
+    text-align: left;
     vertical-align: top;
     padding: 5px 0 0 5px;
-    color: #AAA;
+    color: #D7D7D7;
 }
 
 .contact-form .button-contact{
-    font-size: 26px;
+    font-size: 30px;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 20px 40px;
     width: 100%;
-    color: white;
+    color: #fff;
     text-decoration: none;
     background: #38C3AD;
     border: 1px solid #38C3AD;
     border-radius: 10px;
     margin-top: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 1;
+    cursor: pointer;
 }
+
+.contact-form .button-contact:hover{
+    opacity: 0.8;
+}
+
 
 /* footer */
 
@@ -758,7 +804,7 @@ body {
 .footer .copy{
     float: left;
     font-size: 16px;
-    color: lightgray;
+    color: #C2C2C2;
 }
 
 .footer .social-icons{
@@ -769,8 +815,6 @@ body {
     padding: 0 3px;
 
 }
-
-
 
 .footer .logo small{
     float: right;
