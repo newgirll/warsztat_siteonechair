@@ -350,15 +350,15 @@ body {
 }
 
 .section-pictures .col-1-3{
-    width: 33%;
+    width: 33.3333%;
     float: left;
     padding: 0 10px;
     position: relative;
 }
 
 .section-pictures .picture-img{
-    width: 329px;
-    height: 225px;
+    width: 330px;
+    height: 220px;
     text-decoration: none;
     color: black;
     font-weight: 500;
@@ -387,11 +387,18 @@ body {
     transition: 0.5s all;
 }
 
+.picture-img.active .picture-cnt{
+    top: 0;
+    height: 225px;
+    background: #fff;
+    border: 1px solid #DDD;
+    
+}
 
 .section-pictures .picture-title{
     position: relative;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .section-pictures .picture-title::after{
@@ -405,25 +412,6 @@ body {
    
 }
 
-.picture-img .picture-text{
-    overflow: hidden;
-    height: 0;
-    color: rgba(0, 0, 0, 0);  
-}
-
-.picture-img.active .picture-text{
-    height: 190px;
-    color: rgba(0, 0, 0, 1);
-    overflow: visible; 
-}
-
-.picture-img.active .picture-cnt{
-    top: 0;
-    height: 100%;
-    background: #fff;
-    border: 1px solid #DDD;
-    
-}
 
 /* section prices */
 
