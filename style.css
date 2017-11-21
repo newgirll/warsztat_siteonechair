@@ -677,7 +677,7 @@ body {
 }
 
 .contact-form textarea {
-    height: 195px;
+    height: 220px;
     resize: none;
 }
 
@@ -717,7 +717,7 @@ body {
 
 .contact-form .checkbox{
     position: relative;
-    margin-top: 30px;
+    margin-top: 10px;
     display: block;
     overflow: hidden;
 }
@@ -741,7 +741,7 @@ body {
     background-position:  center center;
     background-repeat:  no-repeat;
     position: absolute;
-    left: 0;
+    bottom: 0;
     top: 0;
     content: '';
     opacity: 0;
